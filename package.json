@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "learntime",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -7,7 +7,7 @@
     "start": "node dist/index.js",
     "dev": "ts-node-dev server/index.ts",
     "build": "tsc",
-    "heroku-postbuild": "tsc && cd client && npm install && npm run build"
+    "heroku-postbuild": "tsc && cd client && npm i --only=dev && npm i && npm run build"
   },
   "keywords": [],
   "author": "",
