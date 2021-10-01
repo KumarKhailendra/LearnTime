@@ -24,7 +24,7 @@ export const createBlog = (blog: IBlog, token: string) =>
 async (dispatch: Dispatch<IAlertType | ICreateBlogsUserType>) => {
   const result = await checkTokenExp(token, dispatch)
   const access_token = result ? result : token
-  
+
   let url;
   try {
     dispatch({ type: ALERT, payload: { loading: true } })
@@ -119,7 +119,6 @@ export const updateBlog = (blog: IBlog, token: string) =>
 async (dispatch: Dispatch<IAlertType>) => {
   const result = await checkTokenExp(token, dispatch)
   const access_token = result ? result : token
-
   let url;
   try {
     dispatch({ type: ALERT, payload: { loading: true } })
@@ -146,7 +145,6 @@ export const deleteBlog = (blog: IBlog, token: string) =>
 async (dispatch: Dispatch<IAlertType | IDeleteBlogsUserType>) => {
   const result = await checkTokenExp(token, dispatch)
   const access_token = result ? result : token
-
   try {
     dispatch({
       type: DELETE_BLOGS_USER_ID,

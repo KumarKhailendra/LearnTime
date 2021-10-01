@@ -26,4 +26,8 @@ export interface IDeleteCategory{
     payload: string
 }
 
-export type ICategoryType = ICreateCategory | IGetCategories | IUpdateCategory | IDeleteCategory
+export type ICategoryType = 
+| ICreateCategory 
+| IGetCategories 
+| IUpdateCategory 
+| IDeleteCategory

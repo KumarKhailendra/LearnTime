@@ -87,9 +87,11 @@ const authCtrl = {
 
     try {
       res.clearCookie('refreshtoken', { path: `/api/refresh_token` })
+
       await Users.findOneAndUpdate({_id: req.user._id}, {
         rf_token: ''
       })
+
       return res.json({msg: "Logged out!"})
 
     } catch (err: any) {
@@ -112,7 +114,6 @@ const authCtrl = {
 
       const access_token = generateAccessToken({id: user._id})
       const refresh_token = generateRefreshToken({id: user._id}, res)
-
 
       await Users.findOneAndUpdate({_id: user._id}, {
         rf_token: refresh_token
@@ -280,9 +281,8 @@ const loginUser = async (user: IUser, password: string, res: Response) => {
   const access_token = generateAccessToken({id: user._id})
   const refresh_token = generateRefreshToken({id: user._id}, res)
 
-
   await Users.findOneAndUpdate({_id: user._id}, {
-    rf_token: refresh_token
+    rf_token:refresh_token
   })
 
   res.json({
@@ -295,12 +295,10 @@ const loginUser = async (user: IUser, password: string, res: Response) => {
 
 const registerUser = async (user: IUserParams, res: Response) => {
   const newUser = new Users(user)
-  
 
   const access_token = generateAccessToken({id: newUser._id})
   const refresh_token = generateRefreshToken({id: newUser._id}, res)
 
-  
   newUser.rf_token = refresh_token
   await newUser.save()
 

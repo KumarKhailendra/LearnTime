@@ -18,7 +18,7 @@ async (dispatch: Dispatch<IAuthType | IAlertType>) => {
     dispatch({ type: AUTH,payload: res.data })
 
     dispatch({ type: ALERT, payload: { success: res.data.msg } })
-    localStorage.setItem('logged', 'devat-channel')
+    localStorage.setItem('logged', 'LearnTime')
     
   } catch (err: any) {
     dispatch({ type: ALERT, payload: { errors: err.response.data.msg } })
@@ -48,7 +48,7 @@ async (dispatch: Dispatch<IAuthType | IAlertType>) => {
 export const refreshToken = () => 
 async (dispatch: Dispatch<IAuthType | IAlertType>) => {
   const logged = localStorage.getItem('logged')
-  if(logged !== 'devat-channel') return;
+  if(logged !== 'LearnTime') return;
 
   try {
     dispatch({ type: ALERT, payload: { loading: true } })
@@ -65,7 +65,7 @@ async (dispatch: Dispatch<IAuthType | IAlertType>) => {
 }
 
 
-export const logout = async (token: string) => 
+export const logout = (token: string) => 
 async (dispatch: Dispatch<IAuthType | IAlertType>) => {
   const result = await checkTokenExp(token, dispatch)
   const access_token = result ? result : token
@@ -89,7 +89,7 @@ async (dispatch: Dispatch<IAuthType | IAlertType>) => {
     dispatch({ type: AUTH,payload: res.data })
 
     dispatch({ type: ALERT, payload: { success: res.data.msg } })
-    localStorage.setItem('logged', 'devat-channel')
+    localStorage.setItem('logged', 'LearnTime')
     
   } catch (err: any) {
     dispatch({ type: ALERT, payload: { errors: err.response.data.msg } })
@@ -106,7 +106,7 @@ async (dispatch: Dispatch<IAuthType | IAlertType>) => {
     dispatch({ type: AUTH,payload: res.data })
 
     dispatch({ type: ALERT, payload: { success: res.data.msg } })
-    localStorage.setItem('logged', 'devat-channel')
+    localStorage.setItem('logged', 'LearnTime')
     
   } catch (err: any) {
     dispatch({ type: ALERT, payload: { errors: err.response.data.msg } })
@@ -150,7 +150,7 @@ export const verifySMS = async (
       dispatch({ type: AUTH,payload: res.data })
 
       dispatch({ type: ALERT, payload: { success: res.data.msg } })
-      localStorage.setItem('logged', 'devat-channel')
+      localStorage.setItem('logged', 'LearnTime')
     } catch (err: any) {
       dispatch({ type: ALERT, payload: { errors: err.response.data.msg } })
       setTimeout(() => {

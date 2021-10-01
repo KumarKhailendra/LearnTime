@@ -62,13 +62,13 @@ const categoryCtrl = {
 
     try {
       const blog = await Blogs.findOne({category: req.params.id})
-      if(blog)
+      if(blog) 
         return res.status(400).json({
           msg: "Can not delete! In this category also exist blogs."
         })
 
       const category = await Categories.findByIdAndDelete(req.params.id)
-      if(!category)
+      if(!category) 
         return res.status(400).json({msg: "Category does not exists."})
 
       res.json({ msg: "Delete Success!" })

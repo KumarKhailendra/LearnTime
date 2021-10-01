@@ -14,7 +14,6 @@ import {
 
 import { checkTokenExp } from '../../utils/checkTokenExp'
 
-
 export const createCategory = (name: string, token: string) => 
 async(dispatch: Dispatch<IAlertType | ICategoryType>) => {
   const result = await checkTokenExp(token, dispatch)
@@ -60,7 +59,10 @@ async(dispatch: Dispatch<IAlertType | ICategoryType>) => {
   try {
 
     dispatch({ type: UPDATE_CATEGORY, payload: data })
-    await patchAPI(`category/${data._id}`, { name: data.name }, access_token)
+
+    await patchAPI(`category/${data._id}`, { 
+      name: data.name 
+    }, access_token)
 
   } catch (err: any) {
     dispatch({ type: ALERT, payload: { errors: err.response.data.msg }})

@@ -39,7 +39,6 @@ const commentReducer = (
             ...item,
             replyCM: [
               action.payload,
-              ...item.replyCM as []
             ]
           }
           : item
