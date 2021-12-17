@@ -8,9 +8,9 @@
 > + Comment realtime with Socket.io
 > + Pagination, search with autocomplete Mongodb
 
-## Importent Informetion
-### Please Login with Google or Facebook
-### We facing some issue with sending Mail and SMS
+# Importent Informetion
+## Please Login with Google or Facebook
+## We facing some issue with sending Mail and SMS
 
 ## Demo: https://learn-time.herokuapp.com/
 
