@@ -10,7 +10,7 @@
 
 ## Importent Informetion
 ### Please Login with Google or Facebook
-####We facing some issue with sending Mail and SMS
+###We facing some issue with sending Mail and SMS
 
 ## Demo: https://learn-time.herokuapp.com/
 
