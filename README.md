@@ -10,7 +10,7 @@
 
 ## Importent Informetion
 ### Please Login with Google or Facebook
-###We facing some issue with sending Mail and SMS
+### We facing some issue with sending Mail and SMS
 
 ## Demo: https://learn-time.herokuapp.com/
 
@@ -31,3 +31,45 @@
 ### cd client ---> `npm start`
 
 ## Server runs on http://localhost:5000 and client on http://localhost:3000
+
+## Interface 
+
+### Defoult Home Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/DefoultHomePage.png)
+
+
+### User Home Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/UserHome.png)
+
+
+### Blog Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/blog.png)
+
+
+### Comments
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/comment.png)
+
+
+### Create Blog Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/createblog.png)
+
+
+### Login Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/login%20page.png)
+
+
+### Register Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/register.png)
+
+
+### Profile Page
+
+![alt](https://github.com/KumarKhailendra/LearnTime/blob/c501c1df5b421334188e34948201a2cedf933d75/screenshort/profile1.png)
+
